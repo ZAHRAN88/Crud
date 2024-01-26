@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="test.css" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <section class="py-5">
+      <div class="container mt-3">
+        <label for="productName"> product name</label>
+        <input required  type="text" name="" id="productName" class="form-control" />
+        <label for="productprice"> product price</label>
+        <input required type="number"  id="productPrice" class="form-control" />
+        <label for="productCatg"> product Catg</label>
+        <input required type="text"  id="productCatg" class="form-control" />
+        <label for="productDesc"> product Desc</label>
+            <input required type="text" id="productDesc" class="form-control">
+        <label for="productCount" >Count</label>
+            <input required type="number" id="productCount" class="form-control count">
+            <button type="button" class="btn btn-outline-primary my-5" id="addProduct" onclick="addProduct()">Add Product</button>
+            <button style="display: none;" type="button" class="btn btn-outline-primary my-5" id="upProduct" onclick="updateProduct()" >Update product</button>
+            <button type="button" class="btn btn-outline-danger my-5" id="deleteAll" onclick="delAll()">Delete All</button>
+          <!--   <input type="search" name="" class="form-control w-50 mx-auto my-5" placeholder="Search" id="search"> -->
+          <input type="search" name="" class="form-control w-50 mx-auto my-5" placeholder="Search" id="search" onkeyup="searchProducts()">
+
+            <table class="table table-responsive-lg text-center">
+              <caption>
+                <p>Total Price: <span id="totalPrice">0.00</span></p>
+
+              </caption>
+                <thead class="table-info  my-5">
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Categorie</th>
+                    <th>Description</th>
+                    <th>Count</th>
+                    <th>total</th>
+                    
+                    <th>Action</th>
+                    
+                </thead>
+                <tbody id="tbody">
+                   
+                </tbody>
+            </table>
+      </div>
+    
+    </section>
+
+ 
+    <script src="test.js"></script>
+  </body>
+</html>

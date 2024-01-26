@@ -1,0 +1,11 @@
+label{
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+.count{
+    width: 10%;
+
+}
+body{
+    overflow-x: hidden;
+}
